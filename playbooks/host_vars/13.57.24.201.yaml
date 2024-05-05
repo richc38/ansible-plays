@@ -1,0 +1,6 @@
+#this is for ubuntu
+ansible_user: ubuntu 
+apache_package: apache2 
+apache_service: apache2
+os_distro: ubuntu
+password: 123

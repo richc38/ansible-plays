@@ -1,0 +1,5 @@
+#this is for linux
+apache_package: httpd 
+apache_service: httpd
+os_distro: amazon linux2
+password: 123
