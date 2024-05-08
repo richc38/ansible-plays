@@ -1,0 +1,3 @@
+[machines]
+13.57.24.201 ansible_user=ubuntu #ubunu 
+54.153.112.20 #amazon linux2
