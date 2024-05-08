@@ -1,5 +1,5 @@
 [webservers]
-13.52.180.217 ansible_user=ubuntu #ubunu 
+13.52.180.217 ansible_user=ubuntu #ubuntu 
 50.18.37.238 #amazon linux2
 
 [dbservers]
