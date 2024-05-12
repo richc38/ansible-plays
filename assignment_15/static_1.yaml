@@ -1,0 +1,33 @@
+---
+  - name: setting up LAMP server
+    hosts: machines
+    become: true
+    tasks:
+
+      - name: install httpd
+        yum:
+          name: httpd
+          state: present
+        when: ansible_distribution == "Amazon"  
+
+      - name: install apache
+        apt:
+          name: apache2
+          state: present
+        when: ansible_os_family == "Debian"
+
+      - name: start httpd
+        service:
+          name: httpd
+          state: started
+        when: ansible_distribution == "RedHat", "Amazon"  
+
+      - name: MySQL community repo
+        apt_repository:
+          name: mysql80-community
+          description: MySQL 8.0 Community Server
+          baseurl: https://repo.mysql.com/yum/mysql-8.0-community/el/7/$basearch/
+          gpgkey: https://repo.mysql.com/RPM-GPG-KEY-mysql
+          enabled: 1
+          gpgcheck: 1
+        when: ansible_os_family == "Ubuntu"

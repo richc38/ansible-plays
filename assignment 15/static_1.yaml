@@ -1,9 +1,0 @@
----
-- name: setting up LAMP server
-  hosts: machines
-  become: true
-  tasks:
-  - name: 
-    package:
-      name: "{{ apache_package }}"
-      state: present
